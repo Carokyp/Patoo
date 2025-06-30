@@ -35,7 +35,9 @@ public class RoundManager : MonoBehaviour
     public float min;
     public float sec;
 
-    private bool hasAddBeenShowed = false;
+    //private bool hasAddBeenShowed = false;
+
+    public float timeTaken;
    
     
     void Awake()
@@ -51,7 +53,7 @@ public class RoundManager : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        AddManager.instance.gamesPlayed++;
+        
     }
 
     void Update()
@@ -84,6 +86,8 @@ public class RoundManager : MonoBehaviour
 
         if (endingRound && board.currentState ==  Board.BoardState.move)
         {
+            timeTaken = Time.realtimeSinceStartup;
+            Debug.Log(timeTaken);
             WinCheck();
             shufflePanel.SetActive(false);
             endingRound = false;
@@ -281,21 +285,14 @@ public class RoundManager : MonoBehaviour
 
         }
 
-        if (hasAddBeenShowed == false && AddManager.instance.gamesPlayed >= 3)
+        /*if (hasAddBeenShowed == false)
         {
-            
-            StartCoroutine(AddTimer());
+
+          
             hasAddBeenShowed = true;
-        }
+        }*/
   
     }
-    IEnumerator AddTimer() 
-    {
-        yield return new WaitForSeconds(2f);
-        AddManager.instance.interstitial.ShowAd();
-        AddManager.instance.interstitial.LoadAd();
-        AddManager.instance.gamesPlayed = 0;
-    
-    }
+
 
 }
