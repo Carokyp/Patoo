@@ -29,13 +29,12 @@ public class RoundManager : MonoBehaviour
     public float scoreSpeed;
 
     public int scoreTarget1, scoreTarget2, scoreTarget3;
-    
 
 
     public float min;
     public float sec;
 
-    //private bool hasAddBeenShowed = false;
+    private bool hasAddBeenShowed = false;
 
     public float timeTaken;
    
@@ -53,6 +52,9 @@ public class RoundManager : MonoBehaviour
     {
         Time.timeScale = 1;
 
+        AddManager.instance.institatial.LoadInterstitialAd();
+
+        AddManager.instance.gamePlayed++;
         
     }
 
@@ -285,12 +287,14 @@ public class RoundManager : MonoBehaviour
 
         }
 
-        /*if (hasAddBeenShowed == false)
+        if (hasAddBeenShowed == false && AddManager.instance.gamePlayed >= 3)
         {
+            AddManager.instance.institatial.ShowInterstitialAd();
 
+            AddManager.instance.gamePlayed = 0;
           
             hasAddBeenShowed = true;
-        }*/
+        }
   
     }
 

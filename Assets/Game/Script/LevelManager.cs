@@ -14,11 +14,13 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         
+        Debug.LogWarning(Analytics.initializeOnStartup);
     }
 
     
     public void LoadLevel()
     {
+       
         AnalyticsResult analyticsResult = Analytics.CustomEvent(
 
             "Levels Progress", new Dictionary<string, object> {
