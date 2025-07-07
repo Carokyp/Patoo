@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "216691322002",
+    "project_id": "patoo-73a2c",
+    "storage_bucket": "patoo-73a2c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216691322002:android:a5b4a79dafed169d884a4b",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.PatooGame"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5tSoc1D3FGYzaA_OIRU0uNhe9AJM5KBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
