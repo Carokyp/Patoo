@@ -1,7 +1,7 @@
 # Patoo
 
 The game is now available on the Apple App Store. <br>
-[Link to Patoo](https://apps.apple.com/gb/app/patoo/id6753175300Patoo)
+[Link to Patoo](https://apps.apple.com/gb/app/patoo/id6753175300)
 
 ## A Wholesome Match-3 Adventure Inspired by My Dog
 
